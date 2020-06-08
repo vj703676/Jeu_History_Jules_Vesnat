@@ -94,7 +94,7 @@ class Scene2 extends Phaser.Scene {
         this.imageGroup.add(bulle);
         this.textevictoire= this.add.text(720, 520,"", { fontSize: '25px', fill: '#000' }).setScale(1.25);
         this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Buongiorno !\nJe suis Léonard,\nje viens du petit\n village de Vinci");}, loop: false });
-        this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demande \nsi j'ai entendu\nparler du Graal?");}, loop: false });
+        this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler du Graal?");}, loop: false });
         this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Depuis peu, \nje suis au service\nde Laurent de Médicis\ndit le Magnifique");}, loop: false });
         this.time.addEvent({ delay: 34000, callback: ()=>{this.textevictoire.setText("Et j'ai entendu\ndes rumeurs\ncomme quoi\nles Médicis");}, loop: false });
         this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("auraient ramené\nle Saint Graal\ndes Croisades");}, loop: false });
