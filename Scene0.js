@@ -26,8 +26,3 @@ class Scene0 extends Phaser.Scene {
     }
 }
 
-window.addEventListener('resize', function (event) {
-
-    game.scale.resize(window.innerWidth, window.innerHeight);
-    
-    }, false);
