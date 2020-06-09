@@ -25,3 +25,9 @@ class Scene0 extends Phaser.Scene {
         this.time.addEvent({ delay: 10000, callback: ()=>{ this.scene.start("bootGame")}, loop: false });
     }
 }
+
+window.addEventListener('resize', function (event) {
+
+    game.scale.resize(window.innerWidth, window.innerHeight);
+    
+    }, false);
