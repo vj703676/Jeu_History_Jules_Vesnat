@@ -7,6 +7,7 @@ class Scene0 extends Phaser.Scene {
     preload(){
         this.load.video('chargement', 'assets/preload.mp4', 'loadeddata', false, true);
         this.load.audio('preson', 'assets/preload_son.mp3');
+       
     }
 
     create(){

@@ -340,7 +340,7 @@ class Scene3_6 extends Phaser.Scene {
 
       checkscore(){
         if((this.score == this.montant) && (this.score1 == this.montant1)){
-            this.textevictoire.setText("Le compte est bon,\napporte les lingots\nd'or dans la\nsalle 36");
+            this.textevictoire.setText("Le compte est bon,\napportez les lingots\nd'or dans la\nsalle 36");
             this.time.addEvent({ delay: 10000, callback: ()=>{ this.music3.stop() && this.scene.start("Scene4") ;}, loop: false });
         }else {
             this.textevictoire.setText("Non ce n'est pas ça");
