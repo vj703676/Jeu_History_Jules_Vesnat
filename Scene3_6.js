@@ -88,7 +88,7 @@ class Scene3_6 extends Phaser.Scene {
 
         
         this.textevictoire= this.add.text(1490, 520, 'Un de nos richissime\nclient, Ludovic Sforza,\nmembre de la famille\ndes ducs de Milan...', { fontSize: '25px', fill: '#000' }).setScale(1.25);
-        this.time.addEvent({ delay: 10000, callback: ()=>{this.textevictoire.setText("Désire effectuer\nun échange de 3 lingots\nd'or, de 5 euros et\n18 centimes chacun,\n préparez la somme que\n nous lui devons en\n      retour");}, loop: false });
+        this.time.addEvent({ delay: 10000, callback: ()=>{this.textevictoire.setText("...désire effectuer\nun échange de 3 lingots\nd'or, de 5 euros et\n18 centimes chacun,\n préparez la somme que\n nous lui devons en\n      retour");}, loop: false });
      
 
         const clickButton01 = this.add.image(850, 110, '1euro').setScale(0.13).setInteractive().on('pointerdown', () =>this.add.image(850, 500, '1euro').setScale(0.13)  && C-- && this.count03.setText(C) &&  A++ && this.count01.setText(A)  && limit01(A) ); 

@@ -49,7 +49,8 @@ class Scene6_10 extends Phaser.Scene {
     checkscore(var1){
         if((var1 == 1)){
             this.textevictoire.setText("Malédiction !\nTu m'as vaincu!\nJe te laisse passer...\nVa à présent !");
-            this.time.addEvent({ delay: 5000, callback: ()=>{  this.scene.start("Scene7");}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{ this.game.sound.stopAll();}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene7");}, loop: false });
         }else {
             this.textevictoire.setText("Ce n'est pas la\nbonne réponse...");
             this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene6_10")}, loop: false });

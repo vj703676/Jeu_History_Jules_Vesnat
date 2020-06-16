@@ -37,7 +37,7 @@ class Scene2_2 extends Phaser.Scene {
         
 
         
-        this.background = this.add.image(1080,500,'banquier').setScale(1);
+        this.background = this.add.image(1080,500,'banquier').setScale(1.1);
         this.background = this.add.image(1450,300,'bulle1').setScale(1.2);
 
         this.textevictoire= this.add.text(1270, 220, 'Hmmm \n Vous êtes le nouveau?\nallez voir Lorenzo\npour commencer', { fontSize: '25px', fill: '#000' }).setScale(1.25);

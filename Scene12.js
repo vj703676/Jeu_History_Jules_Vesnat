@@ -35,7 +35,7 @@ class Scene12 extends Phaser.Scene {
         this.background = this.add.image(1080,500,'grece').setScale(1.37);
 
 
-        const clickButton = this.add.image(1950, 950, 'fleche1').setScale(0.15).setInteractive().on('pointerdown', () =>this.scene.start("Scene6")&& this.music3.stop() ); 
+        const clickButton = this.add.image(1950, 950, 'fleche1').setScale(0.15).setInteractive().on('pointerdown', () =>this.scene.start("Scene6")/*&& this.music3.stop()*/ ); 
         clickButton.on('pointerover', function(){clickButton.setTint(0x738080);}, this)
         clickButton.on('pointerout', function(){clickButton.setTint(0xffffff);}, this)
         
