@@ -100,18 +100,14 @@ class Scene12 extends Phaser.Scene {
         var bulle = this.add.image(900,600,'bulle1').setScale(1.2);
         this.imageGroup.add(bulle);
         this.textevictoire= this.add.text(720, 520,"", { fontSize: '25px', fill: '#000' }).setScale(1.25);
-        this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Buongiorno !\nJe suis Léonard,\nje viens du petit\n village de Vinci");}, loop: false });
-        this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler du Graal?");}, loop: false });
-        this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Depuis peu, \nje suis au service\nde Laurent de Médicis\ndit le Magnifique");}, loop: false });
-        this.time.addEvent({ delay: 34000, callback: ()=>{this.textevictoire.setText("Et j'ai entendu\ndes rumeurs\ncomme quoi\nles Médicis");}, loop: false });
-        this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("auraient ramené\nle Saint Graal\ndes Croisades");}, loop: false });
-        this.time.addEvent({ delay: 54000, callback: ()=>{this.textevictoire.setText("et le garderaient\ndans une salle\nsecrète");}, loop: false });
-        this.time.addEvent({ delay: 64000, callback: ()=>{this.textevictoire.setText("dans leur banque\njuste en face");}, loop: false });
-        this.time.addEvent({ delay: 74000, callback: ()=>{this.textevictoire.setText("J'ai aussi\nentendu dire\n qu'ils cherchaient\ndes employés");}, loop: false });
-        this.time.addEvent({ delay: 84000, callback: ()=>{this.textevictoire.setText("A présent\nje dois vous laisser\n et continuer ma\ndernière peinture");}, loop: false });
-        this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("Bonne chance\n dans Florence !");}, loop: false });
-        this.time.addEvent({ delay: 104000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
-        this.time.addEvent({ delay: 114000, callback: ()=>{this.imageGroup.clear(true);}, loop: false });
+        this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Bonjour toi !\nJe suis Pythagore,\nun mathématicien\n grecque");}, loop: false });
+        this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler de la boîte\nde Pandore?");}, loop: false });
+        this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Il paraît qu'elle \nest gardée par\nle Sphinx\nde la grotte");}, loop: false });
+        this.time.addEvent({ delay: 34000, callback: ()=>{this.textevictoire.setText("Ce Sphinx mange\nles personnes\nqui se trompent\nà ses enigmes");}, loop: false });
+        this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("Suit le panneau\net dans la forêt\ntu trouveras la grotte");}, loop: false });
+        this.time.addEvent({ delay: 54000, callback: ()=>{this.textevictoire.setText("Bonne chance !");}, loop: false });
+        this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
+        this.time.addEvent({ delay: 94000, callback: ()=>{this.imageGroup.clear(true);}, loop: false });
     }
     
     update(){
