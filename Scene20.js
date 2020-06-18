@@ -125,9 +125,6 @@ class Scene20 extends Phaser.Scene {
         },this);
 
 
-        clickButton6.on('pointerdown', function(){
-            this.fonction4();
-        },this);
 
 
         clickButton7.on('pointerdown', function(){

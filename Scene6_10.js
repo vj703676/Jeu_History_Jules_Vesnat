@@ -21,7 +21,7 @@ class Scene6_10 extends Phaser.Scene {
 
         this.background = this.add.image(2020,150,'parchemin2').setScale(0.2).setDepth(1);
 
-        this.niveau= this.add.text(1970, 107, 'Niveau\n BONUS', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
+        this.niveau= this.add.text(1970, 107, 'Niveau\n ULTIME', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
 
 
         this.textevictoire= this.add.text(520, 110, 'Tu as réussi\nà répondre juste\nà toutes mes questions', { fontSize: '25px', fill: '#000' }).setScale(1.25);
