@@ -9,7 +9,7 @@ class Scene3_5 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('tableau', 'assets/tableau.png');
+        this.load.image('tableau', 'assets/tableau1.png');
         this.load.image('1cent', 'assets/1cent.png');
         this.load.image('2cent', 'assets/2cent.png');
         this.load.image('5cent', 'assets/5cent.png');
@@ -60,7 +60,7 @@ class Scene3_5 extends Phaser.Scene {
         this.montant1 = 5;
         
         this.background = this.add.image(1080,510,'tableau').setScale(1);
-        this.background = this.add.image(1700,580,'bulle').setScale(1.35);
+        this.background = this.add.image(1600,680,'bulle').setScale(1.35);
         
         var count1;
         var count2;
@@ -87,7 +87,7 @@ class Scene3_5 extends Phaser.Scene {
         
 
         
-        this.textevictoire= this.add.text(1470, 540, 'Rendez moi la monnaie\nsur 8 euros et 50 centimes\npour un rubis de Paris\nà 3 euros et 11 centimes', { fontSize: '25px', fill: '#000' }).setScale(1.25);
+        this.textevictoire= this.add.text(1380, 650, 'Rendez moi la monnaie\nsur 8 euros et 50 centimes\npour un rubis de Paris\nà 3 euros et 11 centimes', { fontSize: '25px', fill: '#000' }).setScale(1.25);
       
      
 

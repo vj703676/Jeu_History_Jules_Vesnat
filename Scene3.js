@@ -9,7 +9,7 @@ class Scene3 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('tableau', 'assets/tableau.png');
+        this.load.image('tableau', 'assets/tableau1.png');
         this.load.image('1euro', 'assets/1euro.png');
         this.load.image('2euro', 'assets/2euro.png');
         this.load.image('bulle', 'assets/bulle.png');
@@ -50,7 +50,7 @@ class Scene3 extends Phaser.Scene {
         this.montant = 5;
         
         this.background = this.add.image(1080,510,'tableau').setScale(1);
-        this.background = this.add.image(1700,580,'bulle').setScale(1.2);
+        this.background = this.add.image(1600,680,'bulle').setScale(1.2);
         
         var count1;
         var count2;
@@ -63,7 +63,7 @@ class Scene3 extends Phaser.Scene {
         
 
         
-        this.textevictoire= this.add.text(1500, 560, 'Il me faut une somme \n de 5 euros pour\n un client de\n Lombardie', { fontSize: '25px', fill: '#000' }).setScale(1.25);
+        this.textevictoire= this.add.text(1400, 660, 'Il me faut une somme \n de 5 euros pour\n un client de\n Lombardie', { fontSize: '25px', fill: '#000' }).setScale(1.25);
       
         
 

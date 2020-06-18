@@ -7,8 +7,7 @@ class Scene6_10 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('Sphinx1', 'assets/Sphinx.png');
-        //this.load.audio('music3', 'assets/music.mp3');
+        
         this.load.image('homme', 'assets/homme.png');
         this.load.image('abeille', 'assets/abeille.png');
         this.load.image('oiseau', 'assets/oiseau.png');

@@ -9,7 +9,7 @@ class Scene3_6 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('tableau', 'assets/tableau.png');
+        this.load.image('tableau', 'assets/tableau1.png');
         this.load.image('1cent', 'assets/1cent.png');
         this.load.image('2cent', 'assets/2cent.png');
         this.load.image('5cent', 'assets/5cent.png');
@@ -60,7 +60,7 @@ class Scene3_6 extends Phaser.Scene {
         this.montant1 = 15;
         
         this.background = this.add.image(1080,510,'tableau').setScale(1);
-        this.background = this.add.image(1700,580,'bulle').setScale(1.35);
+        this.background = this.add.image(1600,680,'bulle').setScale(1.35);
         
         var count1;
         var count2;
@@ -87,7 +87,7 @@ class Scene3_6 extends Phaser.Scene {
         
 
         
-        this.textevictoire= this.add.text(1490, 520, 'Un de nos richissime\nclient, Ludovic Sforza,\nmembre de la famille\ndes ducs de Milan...', { fontSize: '25px', fill: '#000' }).setScale(1.25);
+        this.textevictoire= this.add.text(1400, 610, 'Un de nos richissime\nclient, Ludovic Sforza,\nmembre de la famille\ndes ducs de Milan...', { fontSize: '25px', fill: '#000' }).setScale(1.25);
         this.time.addEvent({ delay: 10000, callback: ()=>{this.textevictoire.setText("...désire effectuer\nun échange de 3 lingots\nd'or, de 5 euros et\n18 centimes chacun,\n préparez la somme que\n nous lui devons en\n      retour");}, loop: false });
      
 

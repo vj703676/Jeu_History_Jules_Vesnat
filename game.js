@@ -10,8 +10,10 @@ const config = {
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
     autoRound: false,
-    
-    scene: [Scene0, Scene1, Scene2, Scene3,Scene3_1,Scene3_2, Scene1_01, Scene1_1, Scene1_2, Scene2_1,Scene2_2, Scene4, Scene5, Scene3_3, Scene3_4, Scene3_5, Scene3_6, Scene6, Scene6_1, Scene6_2, Scene6_3, Scene6_4, Scene6_5, Scene6_6, Scene6_7, Scene6_8, Scene6_9, Scene6_10, Scene7, Scene8, Scene9, Scene10, Scene11,Scene12],
+    dom: {
+        createContainer: true
+    },
+    scene: [Scene0, Scene1, Scene2, Scene3,Scene3_1,Scene3_2, Scene1_01, Scene1_1, Scene1_2, Scene2_1,Scene2_2, Scene4, Scene5, Scene3_3, Scene3_4, Scene3_5, Scene3_6, Scene6, Scene6_1, Scene6_2, Scene6_3, Scene6_4, Scene6_5, Scene6_6, Scene6_7, Scene6_8, Scene6_9, Scene6_10, Scene7, Scene8, Scene9, Scene10, Scene11,Scene12, Scene13, Scene14, Scene15, Scene16, Scene17, Scene18, Scene19, Scene20, Scene21, Scene22],
     physics:{
         default: 'arcade',
         arcade: {

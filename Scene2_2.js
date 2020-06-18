@@ -5,7 +5,7 @@ class Scene2_2 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('banquier', 'assets/banquier.png');
+        this.load.image('banquier', 'assets/banquier1.png');
         
         
         this.load.image('ok', 'assets/flecheb.png');

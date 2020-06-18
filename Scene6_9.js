@@ -8,7 +8,7 @@ class Scene6_9 extends Phaser.Scene {
     preload(){
 
         this.load.image('HexagonePerimetre', 'assets/HexagonePerimetre.png');
-        //this.load.audio('music3', 'assets/music.mp3');
+        
         this.load.image('12cm', 'assets/12cm.png');
         this.load.image('18cm', 'assets/18cm.png');
         this.load.image('24cm', 'assets/24cm.png');
