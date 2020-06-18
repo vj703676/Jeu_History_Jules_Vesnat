@@ -8,18 +8,23 @@ class Scene6_1 extends Phaser.Scene {
     preload(){
 
         this.load.image('FormeCercle', 'assets/FormeCercle.png');
-        //this.load.audio('music3', 'assets/music.mp3');
+       
         this.load.image('Cercle', 'assets/Cercle.png');
         this.load.image('Carre', 'assets/Carre.png');
         this.load.image('Rectangle', 'assets/Rectangle.png');
         this.load.image('Triangle', 'assets/Triangle.png');
+        this.load.image('parchemin2', 'assets/parchemin2.png');
     }
 
      
     create(){
 
-        this.background = this.add.image(1080,510,'FormeCercle').setScale(1);
+  
+        this.background = this.add.image(1080,520,'FormeCercle').setScale(1);
 
+        this.background = this.add.image(2020,150,'parchemin2').setScale(0.2).setDepth(1);
+
+        this.niveau= this.add.text(1970, 107, 'Niveau\n  1/9', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
 
 
 

@@ -7,7 +7,7 @@ class Scene6_10 extends Phaser.Scene {
 
     preload(){
 
-        
+        this.load.image('Sphinx', 'assets/Sphinx.png');
         this.load.image('homme', 'assets/homme.png');
         this.load.image('abeille', 'assets/abeille.png');
         this.load.image('oiseau', 'assets/oiseau.png');
@@ -17,9 +17,11 @@ class Scene6_10 extends Phaser.Scene {
      
     create(){
 
-        this.background = this.add.image(1080,510,'Sphinx1').setScale(1);
+        this.background = this.add.image(1080,520,'Sphinx').setScale(1);
 
+        this.background = this.add.image(2020,150,'parchemin2').setScale(0.2).setDepth(1);
 
+        this.niveau= this.add.text(1970, 107, 'Niveau\n BONUS', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
 
 
         this.textevictoire= this.add.text(520, 110, 'Tu as réussi\nà répondre juste\nà toutes mes questions', { fontSize: '25px', fill: '#000' }).setScale(1.25);
@@ -52,7 +54,7 @@ class Scene6_10 extends Phaser.Scene {
             this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene7");}, loop: false });
         }else {
             this.textevictoire.setText("Ce n'est pas la\nbonne réponse...");
-            this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene6_10")}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene6_1")}, loop: false });
         }
     }
 

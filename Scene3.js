@@ -13,8 +13,9 @@ class Scene3 extends Phaser.Scene {
         this.load.image('1euro', 'assets/1euro.png');
         this.load.image('2euro', 'assets/2euro.png');
         this.load.image('bulle', 'assets/bulle.png');
-        this.load.audio('music3', 'assets/music.mp3');
+        this.load.audio('TW3', 'assets/TW3.mp3');
         this.load.image('valid', 'assets/valid.png');
+        this.load.image('parchemin3', 'assets/parchemin3.png');
         this.load.image('refresh', 'assets/refresh.png');
         this.load.audio('coin','assets/coin.mp3');
     }
@@ -23,7 +24,7 @@ class Scene3 extends Phaser.Scene {
        
         var musicConf = {
             mute: false,
-            volume: 1,
+            volume: 0.6,
             rate: 1,
             loop : true,
         }
@@ -42,14 +43,19 @@ class Scene3 extends Phaser.Scene {
             loop : false,
         }
 
-        this.music3 = this.sound.add("music3");
+        this.music3 = this.sound.add("TW3");
         this.music3.play(musicConf);
         this.soundcoin = this.sound.add("coin");
 
         this.score = 0;
         this.montant = 5;
         
-        this.background = this.add.image(1080,510,'tableau').setScale(1);
+        this.background = this.add.image(1085,520,'tableau').setScale(1);
+
+        this.background = this.add.image(120,890,'parchemin3').setScale(0.23).setDepth(1);
+
+        this.niveau= this.add.text(104 , 857, 'Niveau\n  1/7', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
+
         this.background = this.add.image(1600,680,'bulle').setScale(1.2);
         
         var count1;
@@ -144,7 +150,7 @@ class Scene3 extends Phaser.Scene {
     checkscore(){
         if(this.score == this.montant){
             this.textevictoire.setText("C'est parfait");
-            this.time.addEvent({ delay: 5000, callback: ()=>{ this.music3.stop() && this.scene.start("Scene3_1") ;}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene3_1") ;}, loop: false });
         }else {
             this.textevictoire.setText("Non ce n'est pas ça");
             this.time.addEvent({ delay: 5000, callback: ()=>{ this.music3.stop() && this.scene.start("Math1")}, loop: false });

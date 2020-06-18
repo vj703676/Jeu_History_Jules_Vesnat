@@ -11,7 +11,7 @@ class Scene6 extends Phaser.Scene {
         this.load.image('Sphinx', 'assets/Sphinx.png');
         //this.load.audio('music3', 'assets/music.mp3');
         this.load.image('ok', 'assets/flecheb.png');
-        this.load.audio('sava', 'assets/savazios.mp3');
+        this.load.audio('sava', 'assets/riddle.mp3');
     }
     
     create(){
@@ -27,7 +27,7 @@ class Scene6 extends Phaser.Scene {
 
         this.musicsava.play(musicConf);
         
-        this.background = this.add.image(1080,510,'Sphinx').setScale(1);
+        this.background = this.add.image(1080,520,'Sphinx').setScale(1);
 
 
 
@@ -36,7 +36,7 @@ class Scene6 extends Phaser.Scene {
         this.time.addEvent({ delay: 10000, callback: ()=>{this.textevictoire.setText("Si tu réponds\njuste, l'artefact\nest à toi\n...");}, loop: false });
         this.time.addEvent({ delay: 20000, callback: ()=>{this.textevictoire.setText("Mais si par mégarde\ntu réponds faux,\nde ta vie il\n t'en coûtera");}, loop: false });
 
-        const clickButton = this.add.image(1090, 800, 'ok').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Scene6_1")); 
+        const clickButton = this.add.image(1090, 800, 'ok').setScale(0.25).setInteractive().on('pointerdown', () => this.scene.start("Scene6_1")); 
         clickButton.on('pointerover', function(){clickButton.setTint(0x738080);}, this)
         clickButton.on('pointerout', function(){clickButton.setTint(0xffffff);}, this)
     }

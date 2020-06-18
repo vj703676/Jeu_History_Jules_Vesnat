@@ -19,7 +19,7 @@ class Scene19 extends Phaser.Scene {
             loop : false,
         }
 
-      
+        var num = 0;
 
         this.soundwrong = this.sound.add("wrong");
         this.soundgood = this.sound.add("good");
@@ -30,6 +30,10 @@ class Scene19 extends Phaser.Scene {
 
         this.background = this.add.image(1600,500,'genie1').setScale(1.3).setDepth(0);
 
+        this.background = this.add.image(2000,100,'parchemin1').setScale(0.2).setDepth(1);
+
+        this.niveau= this.add.text(1955, 77, 'Niveau\n  6/9', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
+
         this.bulle = this.add.image(1350,130,'bulle2').setScale(1).setDepth(1); 
 
 
@@ -38,31 +42,31 @@ class Scene19 extends Phaser.Scene {
         this.question= this.add.text(1230, 540, '132-41=?', { fontSize: '25px', fill: '#000' }).setScale(2).setDepth(2);
  
 
-        const clickButton1 = this.add.image(200,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction2());
+        const clickButton1 = this.add.image(200,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num));
         clickButton1.on('pointerover', function(){clickButton1.setTint(0x738080);}, this)
         clickButton1.on('pointerout', function(){clickButton1.setTint(0xffffff);}, this)
-        const clickButton2 = this.add.image(550,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction3()); 
+        const clickButton2 = this.add.image(550,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num)); 
         clickButton2.on('pointerover', function(){clickButton2.setTint(0x738080);}, this)
         clickButton2.on('pointerout', function(){clickButton2.setTint(0xffffff);}, this)
-        const clickButton3 = this.add.image(900,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction4()); 
+        const clickButton3 = this.add.image(900,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num)); 
         clickButton3.on('pointerover', function(){clickButton3.setTint(0x738080);}, this)
         clickButton3.on('pointerout', function(){clickButton3.setTint(0xffffff);}, this)
-        const clickButton4 = this.add.image(200,570, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction2());
+        const clickButton4 = this.add.image(200,570, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num));
         clickButton4.on('pointerover', function(){clickButton4.setTint(0x738080);}, this)
         clickButton4.on('pointerout', function(){clickButton4.setTint(0xffffff);}, this) 
-        const clickButton5 = this.add.image(550,570, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction3()); 
+        const clickButton5 = this.add.image(550,570, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num)); 
         clickButton5.on('pointerover', function(){clickButton5.setTint(0x738080);}, this)
         clickButton5.on('pointerout', function(){clickButton5.setTint(0xffffff);}, this)
-        const clickButton6 = this.add.image(900,570, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction2()); 
+        const clickButton6 = this.add.image(900,570, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num)); 
         clickButton6.on('pointerover', function(){clickButton6.setTint(0x738080);}, this)
         clickButton6.on('pointerout', function(){clickButton6.setTint(0xffffff);}, this)
         const clickButton7 = this.add.image(200,870, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction1()); 
         clickButton7.on('pointerover', function(){clickButton7.setTint(0x738080);}, this)
         clickButton7.on('pointerout', function(){clickButton7.setTint(0xffffff);}, this)
-        const clickButton8 = this.add.image(550,870, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction2()); 
+        const clickButton8 = this.add.image(550,870, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num)); 
         clickButton8.on('pointerover', function(){clickButton8.setTint(0x738080);}, this)
         clickButton8.on('pointerout', function(){clickButton8.setTint(0xffffff);}, this)
-        const clickButton9 = this.add.image(900,870, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>this.fonction4());  
+        const clickButton9 = this.add.image(900,870, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num));  
         clickButton9.on('pointerover', function(){clickButton9.setTint(0x738080);}, this)
         clickButton9.on('pointerout', function(){clickButton9.setTint(0xffffff);}, this)
 
@@ -85,11 +89,66 @@ class Scene19 extends Phaser.Scene {
         this.rep9= this.add.text(870, 850, '87', { fontSize: '25px', fill: '#000' }).setScale(2);
 
 
-     
+        clickButton1.on('pointerdown', function(){
+            this.fonction2();
+        },this);
+
+
+      
+        clickButton2.on('pointerdown', function(){
+            this.fonction3();
+        },this);
+       
+
+
+        clickButton3.on('pointerdown', function(){
+            this.fonction4();
+        },this);
+
+
+        clickButton8.on('pointerdown', function(){
+            this.fonction2();
+        },this);
+
+
+        clickButton9.on('pointerdown', function(){
+            this.fonction3();
+        },this);
+
+
+        clickButton6.on('pointerdown', function(){
+            this.fonction4();
+        },this);
+
+
+        clickButton5.on('pointerdown', function(){
+            this.fonction2();
+        },this);
+
+
+       
+
+        clickButton4.on('pointerdown', function(){
+            this.fonction3();
+        },this);
         
 
       
     }
+
+    checkscore(var1){
+        if((var1 == 3)){
+            console.log(var1);
+            this.background = this.add.image(1600,500,'genie4').setScale(1.3);
+            this.bulle = this.add.image(1350,130,'bulle2').setScale(1); 
+            this.soundwrong.play(this.soundConf);
+            this.textevictoire.setVisible(false)
+            this.textevictoire1= this.add.text(1180, 80, "Tu n'as pas\ntrouvé la solution", { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
+            
+            this.time.addEvent({ delay: 3000, callback: ()=>{ this.scene.start("Scene14");}, loop: false });
+        }
+    }
+
 
     
     fonction1(){

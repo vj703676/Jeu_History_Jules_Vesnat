@@ -17,7 +17,7 @@ class Scene3_1 extends Phaser.Scene {
         this.load.image('20cent', 'assets/20cent.png');
         this.load.image('50cent', 'assets/50cent.png');
         this.load.image('bulle', 'assets/bulle.png');
-        this.load.audio('music3', 'assets/music.mp3');
+        
         this.load.image('valid', 'assets/valid.png');
         this.load.image('refresh', 'assets/refresh.png');
         this.load.audio('coin','assets/coin.mp3');
@@ -25,19 +25,7 @@ class Scene3_1 extends Phaser.Scene {
    
     create(){
        
-        var musicConf = {
-            mute: false,
-            volume: 1,
-            rate: 1,
-            loop : true,
-        }
-
-        var musicConf1 = {
-            mute: true,
-            volume: 0,
-            rate: 0,
-            loop : false,
-        }
+      
 
         var soundConf = {
             mute: false,
@@ -48,13 +36,18 @@ class Scene3_1 extends Phaser.Scene {
 
         this.soundcoin = this.sound.add("coin");
 
-        this.music3 = this.sound.add("music3");
-        this.music3.play(musicConf);
+
 
         this.score = 0;
         this.montant = 35;
         
-        this.background = this.add.image(1080,510,'tableau').setScale(1);
+        this.background = this.add.image(1085,520,'tableau').setScale(1);
+
+        
+        this.background = this.add.image(120,890,'parchemin3').setScale(0.23).setDepth(1);
+
+        this.niveau= this.add.text(104 , 857, 'Niveau\n  2/7', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
+
         this.background = this.add.image(1600,680,'bulle').setScale(1.2);
         
         var count1;
@@ -237,7 +230,7 @@ class Scene3_1 extends Phaser.Scene {
         
         const clickButton7 = this.add.image(1370, 880, 'valid').setScale(0.40).setInteractive().on('pointerdown', () => this.checkscore() ); 
 
-        const clickButton8 = this.add.image(1190, 880, 'refresh').setScale(0.25).setInteractive().on('pointerdown', () => this.scene.start("Scene3_1")&& this.music3.play(musicConf1)); 
+        const clickButton8 = this.add.image(1190, 880, 'refresh').setScale(0.25).setInteractive().on('pointerdown', () => this.scene.start("Scene3_1")); 
        
         clickButton7.on('pointerover', function(){clickButton7.setTint(0xe6ffff);}, this)
         clickButton7.on('pointerout', function(){clickButton7.setTint(0xffffff);}, this)
@@ -281,10 +274,10 @@ class Scene3_1 extends Phaser.Scene {
       checkscore(){
         if(this.score == this.montant){
             this.textevictoire.setText("C'est parfait");
-            this.time.addEvent({ delay: 5000, callback: ()=>{ this.music3.stop() && this.scene.start("Scene3_2") ;}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{  this.scene.start("Scene3_2") ;}, loop: false });
         }else {
             this.textevictoire.setText("Non ce n'est pas ça");
-            this.time.addEvent({ delay: 5000, callback: ()=>{ this.music3.stop() && this.scene.start("Scene3_1")}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{  this.scene.start("Scene3_1")}, loop: false });
         }
     }
 

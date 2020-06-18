@@ -18,9 +18,11 @@ class Scene6_5 extends Phaser.Scene {
      
     create(){
 
-        this.background = this.add.image(1080,510,'FormeLosange').setScale(1);
+        this.background = this.add.image(1080,520,'FormeLosange').setScale(1);
 
+        this.background = this.add.image(2020,150,'parchemin2').setScale(0.2).setDepth(1);
 
+        this.niveau= this.add.text(1970, 107, 'Niveau\n  5/9', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
 
 
         this.textevictoire= this.add.text(520, 110, 'Quel est le nom\nde cette forme\ngéométrique ?', { fontSize: '25px', fill: '#000' }).setScale(1.25);
@@ -51,7 +53,7 @@ class Scene6_5 extends Phaser.Scene {
             this.time.addEvent({ delay: 5000, callback: ()=>{  this.scene.start("Scene6_6") ;}, loop: false });
         }else {
             this.textevictoire.setText("Ce n'est pas la\nbonne réponse...");
-            this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene6_5")}, loop: false });
+            this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene6_1")}, loop: false });
         }
     }
 

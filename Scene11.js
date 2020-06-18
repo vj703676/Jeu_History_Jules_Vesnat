@@ -26,6 +26,6 @@ class Scene11 extends Phaser.Scene {
         this.music2_1.play(musicConf2_11);
         this.background = this.add.video(1100,460,'vortex5').setScale(1.8);
       
-        this.time.addEvent({ delay: 4000, callback: ()=>{ this.music2_1.stop() && this.scene.start("Scene1_01")}, loop: false });
+        this.time.addEvent({ delay: 4000, callback: ()=>{ this.music2_1.stop() && this.scene.start("Scene23")}, loop: false });
     }
 }
