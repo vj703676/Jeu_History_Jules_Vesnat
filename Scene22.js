@@ -156,6 +156,9 @@ class Scene22 extends Phaser.Scene {
         this.soundgood.play(this.soundConf);
         this.question.setText("7x8=56").setDepth(2);
         this.textevictoire.setText("C'est la bonne réponse").setDepth(3);
+        
+            
+            this.time.addEvent({ delay: 5000, callback: ()=>{ this.game.sound.stopAll();}, loop: false });
         this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene31");}, loop: false });
     }
 
