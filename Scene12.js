@@ -100,11 +100,11 @@ class Scene12 extends Phaser.Scene {
         var bulle = this.add.image(900,600,'bulle1').setScale(1.2);
         this.imageGroup.add(bulle);
         this.textevictoire= this.add.text(720, 520,"", { fontSize: '25px', fill: '#000' }).setScale(1.25);
-        this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Bonjour toi !\nJe suis Pythagore,\nun mathématicien\n grecque");}, loop: false });
+        this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Bonjour toi !\nJe suis Pythagore,\nun mathématicien\n grec");}, loop: false });
         this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler de la boîte\nde Pandore?");}, loop: false });
         this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Il paraît qu'elle \nest gardée par\nle Sphinx\nde la grotte");}, loop: false });
         this.time.addEvent({ delay: 34000, callback: ()=>{this.textevictoire.setText("Ce Sphinx mange\nles personnes\nqui se trompent\nà ses enigmes");}, loop: false });
-        this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("Suit le panneau\net dans la forêt\ntu trouveras la grotte");}, loop: false });
+        this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("Suis le panneau\net dans la forêt\ntu trouveras la grotte");}, loop: false });
         this.time.addEvent({ delay: 54000, callback: ()=>{this.textevictoire.setText("Bonne chance !");}, loop: false });
         this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
         this.time.addEvent({ delay: 94000, callback: ()=>{this.imageGroup.clear(true);}, loop: false });

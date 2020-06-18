@@ -102,12 +102,12 @@ class Scene25 extends Phaser.Scene {
         this.textevictoire= this.add.text(720, 520,"", { fontSize: '25px', fill: '#000' }).setScale(1.25);
         this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Bien le bonjour !\nJe suis Al-Khwârizmî,\nun mathématicien \n Perse");}, loop: false });
         this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler de la Lampe?");}, loop: false });
-        this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Je l'ai inventé \nmoi même!\nElle est enchantée\ngrâce aux \n  mathématiques");}, loop: false });
+        this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Je l'ai inventée \nmoi même!\nElle est enchantée\ngrâce aux \n  mathématiques");}, loop: false });
         this.time.addEvent({ delay: 34000, callback: ()=>{this.textevictoire.setText("Mais tu arrives\ntrop tard...");}, loop: false });
-        this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("Des voleurs me\nl'ont enlevé et ils la\ncachent dans leur\n   caverne");}, loop: false });
+        this.time.addEvent({ delay: 44000, callback: ()=>{this.textevictoire.setText("Des voleurs me\nl'ont enlevée et ils la\ncachent dans leur\n   caverne");}, loop: false });
         this.time.addEvent({ delay: 54000, callback: ()=>{this.textevictoire.setText("Elle se trouve\ndans la vallée\ndes portes chaudes");}, loop: false });
         this.time.addEvent({ delay: 64000, callback: ()=>{this.textevictoire.setText("Tu peux demander\nton chemin sur\nta route");}, loop: false });
-        this.time.addEvent({ delay: 74000, callback: ()=>{this.textevictoire.setText("Je te fais don\nde mon chameau\nil te sera très\nutile");}, loop: false });
+        this.time.addEvent({ delay: 74000, callback: ()=>{this.textevictoire.setText("Je t'offre\nmon chameau Raoul\nil te sera très\nutile");}, loop: false });
         this.time.addEvent({ delay: 84000, callback: ()=>{this.textevictoire.setText("Surtout pour\nla traversée\n du désert");}, loop: false });
         this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("Bonne chance\n mon ami !");}, loop: false });
         this.time.addEvent({ delay: 104000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
