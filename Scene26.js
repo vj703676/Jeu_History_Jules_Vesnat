@@ -9,7 +9,7 @@ class Scene26 extends Phaser.Scene {
         
         
         this.load.image('up1', 'assets/up.png');
-        
+        this.load.audio('arabia', 'assets/arabia.mp3');
     }
 
     create(){
@@ -17,20 +17,14 @@ class Scene26 extends Phaser.Scene {
 
         var musicConf1_1 = {
             mute: false,
-            volume: 1.5,
+            volume: 1,
             rate: 1,
             loop : true,
         }
 
-        var musicConf1_2 = {
-            mute: true,
-            volume: 0,
-            rate: 0,
-            loop : false,
-        }
 
         
-        this.music2 = this.sound.add("sound1");
+        this.music2 = this.sound.add("arabia");
        
 
         this.music2.play(musicConf1_1);

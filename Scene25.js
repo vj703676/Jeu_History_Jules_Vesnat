@@ -147,6 +147,8 @@ class Scene25 extends Phaser.Scene {
         
 
         if(checkOverlap(this.chevalier, this.garde)){
+            this.music2.stop();
+            this.music3.stop();
             this.scene.start("Scene26");
             
                
