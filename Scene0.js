@@ -15,7 +15,7 @@ class Scene0 extends Phaser.Scene {
 
         var musicConf0 = {
             mute: false,
-            volume: 1,
+            volume: 0.1,
             rate: 1,
             loop : false,
         }
