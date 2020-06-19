@@ -10,8 +10,8 @@ class Scene3 extends Phaser.Scene {
     preload(){
 
         this.load.image('tableau', 'assets/tableau1.png');
-        this.load.image('1euro', 'assets/1euro.png');
-        this.load.image('2euro', 'assets/2euro.png');
+        this.load.image('1euro', 'assets/1euro1.png');
+        this.load.image('2euro', 'assets/2euro1.png');
         this.load.image('bulle', 'assets/bulle.png');
         this.load.audio('TW3', 'assets/TW3.mp3');
         this.load.image('valid', 'assets/valid.png');
