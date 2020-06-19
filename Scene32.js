@@ -46,7 +46,7 @@ class Scene32 extends Phaser.Scene {
         clickButton.on('pointerdown', function(){
             this.game.sound.stopAll();
         },this);
-        this.time.addEvent({ delay: 34000, callback: ()=>{  clickButton.setVisible(true);}, loop: false });
+        this.time.addEvent({ delay: 45000, callback: ()=>{  clickButton.setVisible(true);}, loop: false });
         
     }
 }
