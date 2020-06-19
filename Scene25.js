@@ -53,7 +53,7 @@ class Scene25 extends Phaser.Scene {
 
         this.pythagore = this.physics.add.image(700,800, 'al').setScale(0.43);
 
-        this.chevalier = this.physics.add.sprite(150, 780, '3').setScale(1.6);
+        this.chevalier = this.physics.add.sprite(150, 750, '3').setScale(1.6);
         //this.chevalier.body.offset.y = 11;
 
         this.chevalier.setBounce(-1);
