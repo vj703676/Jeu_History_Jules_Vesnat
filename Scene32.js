@@ -35,9 +35,7 @@ class Scene32 extends Phaser.Scene {
       
         this.background = this.add.image(1085,520,'space').setScale(1.2);
         this.background = this.add.image(1085,520,'tab1').setScale(0.7);
-        this.time.addEvent({ delay: 15000, callback: ()=>{  this.background = this.add.image(1085,520,'tab2').setScale(0.7);}, loop: false });
-        this.time.addEvent({ delay: 28000, callback: ()=>{  this.background = this.add.image(1085,520,'tab3').setScale(0.7);}, loop: false });
-        this.time.addEvent({ delay: 42000, callback: ()=>{  this.background = this.add.image(1085,520,'tab4').setScale(0.7);}, loop: false });
+      
         const clickButton = this.add.image(1100,900, 'flecheb').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Scene33")); 
         clickButton.on('pointerover', function(){clickButton.setTint(0x738080);}, this)
         clickButton.on('pointerout', function(){clickButton.setTint(0xffffff);}, this)
@@ -46,7 +44,7 @@ class Scene32 extends Phaser.Scene {
         clickButton.on('pointerdown', function(){
             this.game.sound.stopAll();
         },this);
-        this.time.addEvent({ delay: 45000, callback: ()=>{  clickButton.setVisible(true);}, loop: false });
+        this.time.addEvent({ delay: 10000, callback: ()=>{  clickButton.setVisible(true);}, loop: false });
         
     }
 }

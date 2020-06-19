@@ -61,11 +61,11 @@ class Scene1 extends Phaser.Scene {
         clickButton1.on('pointerover', function(){clickButton1.setTint(0xf0ff00);}, this)
         clickButton1.on('pointerout', function(){clickButton1.setTint(0xffffff);}, this)
         
-     const clickButton2 = this.add.image(1950, 870, 'button2').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Math1") && this.music.play(musicConf1));
+     /*const clickButton2 = this.add.image(1950, 870, 'button2').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Math1") && this.music.play(musicConf1));
         //clickButton2.removeInteractive();
         clickButton2.on('pointerover', function(){clickButton2.setTint(0xf0ff00);}, this)
         clickButton2.on('pointerout', function(){clickButton2.setTint(0xffffff);}, this)
-/*
+
         const clickButton3 = this.add.image(1950, 940, 'button3').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Scene6_10") && this.music.play(musicConf1));
         clickButton3.removeInteractive();
         clickButton3.on('pointerover', function(){clickButton3.setTint(0xf0ff00);}, this)
