@@ -43,7 +43,8 @@ class Scene1_01 extends Phaser.Scene {
         
         clickButton.on('pointerover', function(){clickButton.setTint(0x738080);}, this)
         clickButton.on('pointerout', function(){clickButton.setTint(0xffffff);}, this)
-        
+        clickButton.setVisible(false);
+        this.time.addEvent({ delay: 26000, callback: ()=>{clickButton.setVisible(true);}, loop: false });
     }
 
 }

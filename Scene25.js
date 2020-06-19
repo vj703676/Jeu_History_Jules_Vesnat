@@ -97,9 +97,12 @@ class Scene25 extends Phaser.Scene {
         this.physics.add.collider(this.pythagore, this.platforms);
        
 
-        var bulle = this.add.image(900,600,'bulle1').setScale(1.2);
-        this.imageGroup.add(bulle);
+        this.bulle = this.add.image(900,600,'bulle1').setScale(1.2).setVisible(false);
+        
+      
+        
         this.textevictoire= this.add.text(720, 520,"", { fontSize: '25px', fill: '#000' }).setScale(1.25);
+        this.time.addEvent({ delay: 4000, callback: ()=>{this.bulle.setVisible(true);}, loop: false });
         this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Bien le bonjour !\nJe suis Al-Khwârizmî,\nun mathématicien \n Perse");}, loop: false });
         this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler de la Lampe?");}, loop: false });
         this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Je l'ai inventée \nmoi même!\nElle est enchantée\ngrâce aux \n  mathématiques");}, loop: false });
@@ -111,7 +114,8 @@ class Scene25 extends Phaser.Scene {
         this.time.addEvent({ delay: 84000, callback: ()=>{this.textevictoire.setText("Surtout pour\nla traversée\n du désert");}, loop: false });
         this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("Bonne chance\n mon ami !");}, loop: false });
         this.time.addEvent({ delay: 104000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
-        this.time.addEvent({ delay: 114000, callback: ()=>{this.imageGroup.clear(true);}, loop: false });
+        this.time.addEvent({ delay: 104000, callback: ()=>{this.bulle.setVisible(false);}, loop: false });
+       
     }
     
     update(){

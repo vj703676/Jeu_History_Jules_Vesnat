@@ -45,6 +45,8 @@ class Scene13 extends Phaser.Scene {
         const clickButton = this.add.image(1090, 800, 'ok').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Scene14")); 
         clickButton.on('pointerover', function(){clickButton.setTint(0x738080);}, this)
         clickButton.on('pointerout', function(){clickButton.setTint(0xffffff);}, this)
+        clickButton.setVisible(false);
+        this.time.addEvent({ delay: 47000, callback: ()=>{ clickButton.setVisible(true);}, loop: false });
     }
 
 

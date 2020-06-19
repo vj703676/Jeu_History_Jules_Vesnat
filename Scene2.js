@@ -90,9 +90,10 @@ class Scene2 extends Phaser.Scene {
         this.physics.add.collider(this.Leonard, this.platforms);
         this.physics.add.collider(this.Joconde, this.platforms);
 
-        var bulle = this.add.image(900,600,'bulle1').setScale(1.2);
-        this.imageGroup.add(bulle);
+        this.bulle = this.add.image(900,600,'bulle1').setScale(1.2).setVisible(false);
+        
         this.textevictoire= this.add.text(720, 520,"", { fontSize: '25px', fill: '#000' }).setScale(1.25);
+        this.time.addEvent({ delay: 4000, callback: ()=>{this.bulle.setVisible(true);}, loop: false });
         this.time.addEvent({ delay: 4000, callback: ()=>{this.textevictoire.setText("Buongiorno !\nJe suis Léonard,\nje viens du petit\n village de Vinci");}, loop: false });
         this.time.addEvent({ delay: 14000, callback: ()=>{this.textevictoire.setText("Tu me demandes \nsi j'ai entendu\nparler du Graal?");}, loop: false });
         this.time.addEvent({ delay: 24000, callback: ()=>{this.textevictoire.setText("Depuis peu, \nje suis au service\nde Laurent de Médicis\ndit le Magnifique");}, loop: false });
@@ -103,8 +104,8 @@ class Scene2 extends Phaser.Scene {
         this.time.addEvent({ delay: 74000, callback: ()=>{this.textevictoire.setText("J'ai aussi\nentendu dire\n qu'ils cherchaient\ndes employés");}, loop: false });
         this.time.addEvent({ delay: 84000, callback: ()=>{this.textevictoire.setText("A présent\nje dois vous laisser\n et continuer ma\ndernière peinture");}, loop: false });
         this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("Bonne chance\n dans Florence !");}, loop: false });
-        this.time.addEvent({ delay: 104000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
-        this.time.addEvent({ delay: 114000, callback: ()=>{this.imageGroup.clear(true);}, loop: false });
+        this.time.addEvent({ delay: 100000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
+        this.time.addEvent({ delay: 100000, callback: ()=>{this.bulle.setVisible(false);}, loop: false });
     }
     
     update(){

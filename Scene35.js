@@ -31,8 +31,8 @@ class Scene35 extends Phaser.Scene {
      
        
       
-        this.background = this.add.image(1085,520,'fin1').setScale(1.2);
-        this.background = this.add.image(1075,520,'tab6').setScale(0.55);
+        this.background = this.add.image(1085,520,'fin1').setScale(1);
+        this.background = this.add.image(1675,820,'tab6').setScale(0.55);
    
         
     }
