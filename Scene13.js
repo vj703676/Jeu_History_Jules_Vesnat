@@ -39,7 +39,7 @@ class Scene13 extends Phaser.Scene {
         this.textevictoire= this.add.text(1120, 560, 'Je suis le génie\nde la lampe magique,\ncréé par Al-Khwârizmî\nà partir des\n   mathématiques', { fontSize: '25px', fill: '#000' }).setScale(1.25);
         this.time.addEvent({ delay: 10000, callback: ()=>{this.textevictoire.setText("On dirait bien\nque tu es coincé\nici la porte s'est\nrefermée derrière toi");}, loop: false });
         this.time.addEvent({ delay: 20000, callback: ()=>{this.textevictoire.setText("Si tu veux devenir\nmon maître,\net que je t'exauce 3\nvœux...");}, loop: false });
-        this.time.addEvent({ delay: 30000, callback: ()=>{this.textevictoire.setText("Un vœux pour\nsortir d'ici\npar exemple...");}, loop: false });
+        this.time.addEvent({ delay: 30000, callback: ()=>{this.textevictoire.setText("Un vœu pour\nsortir d'ici\npar exemple...");}, loop: false });
         this.time.addEvent({ delay: 36000, callback: ()=>{this.textevictoire.setText("Il va falloir\nque tu répondes\nà mes calculs\nmentaux...");}, loop: false });
         this.time.addEvent({ delay: 45000, callback: ()=>{this.textevictoire.setText("Mais fais attention\ncar tu n'as droit\nqu'à 3 essais\npar question !");}, loop: false });
         const clickButton = this.add.image(1090, 800, 'ok').setScale(0.25).setInteractive().on('pointerdown', () =>this.scene.start("Scene14")); 

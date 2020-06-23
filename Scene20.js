@@ -48,7 +48,7 @@ class Scene20 extends Phaser.Scene {
 
         this.textevictoire= this.add.text(1180, 80, 'Quel est le résultat ?\n   Choisi la bonne\n    réponse...', { fontSize: '25px', fill: '#000' }).setScale(1.1).setDepth(2);
         
-        this.question= this.add.text(1270, 540, '2x6=?', { fontSize: '25px', fill: '#000' }).setScale(2).setDepth(2);
+        this.question= this.add.text(1270, 540, '2×6=?', { fontSize: '25px', fill: '#000' }).setScale(2).setDepth(2);
  
 
         const clickButton1 = this.add.image(200,270, 'papyrus').setScale(0.5).setInteractive().on('pointerdown', () =>num++ && this.checkscore(num));
@@ -161,7 +161,7 @@ class Scene20 extends Phaser.Scene {
         this.background = this.add.image(1600,500,'genie5').setScale(1.3).setDepth(1);
         this.bulle = this.add.image(1350,130,'bulle2').setScale(1).setDepth(2); 
         this.soundgood.play(this.soundConf);
-        this.question.setText("2x6=12").setDepth(2);
+        this.question.setText("2×6=12").setDepth(2);
         this.textevictoire.setText("C'est la bonne réponse").setDepth(3);
         this.time.addEvent({ delay: 5000, callback: ()=>{ this.scene.start("Scene21");}, loop: false });
         

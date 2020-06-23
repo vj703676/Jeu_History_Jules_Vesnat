@@ -29,7 +29,7 @@ class Scene6_1 extends Phaser.Scene {
 
 
         this.textevictoire= this.add.text(520, 110, 'Quel est le nom\nde cette forme\ngéométrique ?', { fontSize: '25px', fill: '#000' }).setScale(1.25);
-       
+        
 
         const clickButton1 = this.add.image(1100, 700, 'Carre').setScale(0.35).setInteractive().on('pointerdown', () =>this.checkscore(2)); 
         clickButton1.on('pointerover', function(){clickButton1.setTint(0x738080);}, this)
