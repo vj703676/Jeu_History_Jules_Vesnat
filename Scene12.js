@@ -10,6 +10,7 @@ class Scene12 extends Phaser.Scene {
         this.load.image('statue', 'assets/statue.png');
         this.load.image('pythagore', 'assets/Pythagore.png');
         this.load.audio('savazios', 'assets/savazios.mp3');
+       
     }
 
 
@@ -110,6 +111,15 @@ class Scene12 extends Phaser.Scene {
         this.time.addEvent({ delay: 54000, callback: ()=>{this.textevictoire.setText("Bonne chance !");}, loop: false });
         this.time.addEvent({ delay: 60000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
         this.time.addEvent({ delay: 60000, callback: ()=>{this.bulle.setVisible(false);}, loop: false });
+
+        const clickButton1 = this.add.image(1090, 800, 'flecheb1').setScale(0.25).setInteractive().on('pointerdown', () =>   this.music2.stop()).setVisible(false); 
+        clickButton1.on('pointerover', function(){clickButton1.setTint(0x738080);}, this)
+        clickButton1.on('pointerout', function(){clickButton1.setTint(0xffffff);}, this)
+        clickButton1.on('pointerdown', function(){
+            this.scene.start("Scene12_1");
+        },this);
+
+        this.time.addEvent({ delay: 60000, callback: ()=>{clickButton1.setVisible(true);}, loop: false });
     }
     
     update(){

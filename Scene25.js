@@ -115,6 +115,17 @@ class Scene25 extends Phaser.Scene {
         this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("Bonne chance\n mon ami !");}, loop: false });
         this.time.addEvent({ delay: 104000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
         this.time.addEvent({ delay: 104000, callback: ()=>{this.bulle.setVisible(false);}, loop: false });
+
+        
+        const clickButton1 = this.add.image(1090, 800, 'flecheb1').setScale(0.25).setInteractive().on('pointerdown', () =>   this.music2.stop()).setVisible(false); 
+        clickButton1.on('pointerover', function(){clickButton1.setTint(0x738080);}, this)
+        clickButton1.on('pointerout', function(){clickButton1.setTint(0xffffff);}, this)
+        clickButton1.on('pointerdown', function(){
+            this.music3.stop();
+            this.scene.start("Scene26");
+        },this);
+
+        this.time.addEvent({ delay: 94000, callback: ()=>{clickButton1.setVisible(true);}, loop: false });
        
     }
     

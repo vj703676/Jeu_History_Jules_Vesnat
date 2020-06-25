@@ -17,3 +17,7 @@ Au cours du jeu vous rencontrerez des personnages historiques pour vous aider da
 
 Le code est sous licence libre  [GNU GPL v3](https://www.gnu.org/licenses/quick-guide-gplv3.fr.html)
 En l'état du projet, toutes les ressources multimédia ne sont pas libres, ce qui peut rendre problématique sa distribution.
+
+### Auteur
+
+Ce jeu a été réalisé par Jules Vesnat, étudiant en 2ème année de DUT informatique, dans le cadre d'un projet univeristaire de l'IUT section informatique de Nice, avec M. Nicolas Pourcelot comme tuteur.

@@ -22,6 +22,14 @@ class Scene2 extends Phaser.Scene {
             loop : true
         }
 
+        var musicConf2_16 = {
+            mute: true,
+            volume: 0,
+            rate: 0,
+            loop : false
+        }
+        
+
         this.imageGroup = this.add.group();
         
         
@@ -106,6 +114,18 @@ class Scene2 extends Phaser.Scene {
         this.time.addEvent({ delay: 94000, callback: ()=>{this.textevictoire.setText("Bonne chance\n dans Florence !");}, loop: false });
         this.time.addEvent({ delay: 100000, callback: ()=>{this.textevictoire.setText("");}, loop: false });
         this.time.addEvent({ delay: 100000, callback: ()=>{this.bulle.setVisible(false);}, loop: false });
+
+        
+        const clickButton1 = this.add.image(1090, 800, 'flecheb1').setScale(0.25).setVisible(false).setInteractive(); 
+        clickButton1.on('pointerover', function(){clickButton1.setTint(0x738080);}, this)
+        clickButton1.on('pointerout', function(){clickButton1.setTint(0xffffff);}, this)
+        clickButton1.on('pointerdown', function(){
+            this.scene.start("Scene2_1");
+            this.music2.play(musicConf2_16);
+            this.music3.play(musicConf2_16);
+        },this);
+
+        this.time.addEvent({ delay: 94000, callback: ()=>{clickButton1.setVisible(true);}, loop: false });
     }
     
     update(){
