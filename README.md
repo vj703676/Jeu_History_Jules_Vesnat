@@ -4,7 +4,8 @@
 [![Capture d'écran](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Larus-delawarensis-021.jpg/320px-Larus-delawarensis-021.jpg "Capture d'écran")](http://monjeuenligne "Capture d'écran")
 
 ###Presentation du jeu
-Quelques lignes de présentation pour savoir de quoi parle le jeu et donner envie.
+Bienvenue dans le jeu de la machine à remonter le temps ! Ce jeu éducatif et ludique vous permet de voyager dans temps et de partir à la recherche d'objets uniques du passé.
+Pour parvenir à récuperer tous les objets vous aurez des séries d'exercices de mathématiques variés à réaliser dans le thème des époques !
 
 ###Liens
 
