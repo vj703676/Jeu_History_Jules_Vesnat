@@ -1,0 +1,4 @@
+Le projet est sous licence GNU GPLv3
+
+https://www.gnu.org/licenses/quick-guide-gplv3.fr.html
+https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9rale_GNU
