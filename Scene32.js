@@ -5,19 +5,13 @@ class Scene32 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('space', 'assets/space.jpg');
-        
-        
-        this.load.image('tab1', 'assets/tab1.png');
-        this.load.image('tab2', 'assets/tab2.png');
-        this.load.image('tab3', 'assets/tab3.png');
-        this.load.image('tab4', 'assets/tab4.png');
-        this.load.image('flecheb', 'assets/flecheb.png');
-        this.load.audio('dune', 'assets/dune.mp3');
+       
     }
 
     create(){
 
+
+        localStorage.setItem('lastScene', 'Scene32');
 
         var musicConf1_1 = {
             mute: false,

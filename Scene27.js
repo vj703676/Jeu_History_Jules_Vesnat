@@ -5,16 +5,13 @@ class Scene27 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('nomade', 'assets/nomade.jpg');
-        
-        
-        this.load.image('flecheb', 'assets/flecheb.png');
+     
         
     }
 
     create(){
 
-
+        localStorage.setItem('lastScene', 'Scene27');
         
         this.background = this.add.image(1080,500,'nomade').setScale(0.6);
       

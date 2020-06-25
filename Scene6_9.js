@@ -7,16 +7,12 @@ class Scene6_9 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('HexagonePerimetre', 'assets/HexagonePerimetre.png');
-        
-        this.load.image('12cm', 'assets/12cm.png');
-        this.load.image('18cm', 'assets/18cm.png');
-        this.load.image('24cm', 'assets/24cm.png');
-        this.load.image('26cm', 'assets/26cm.png');
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_9');
 
         this.background = this.add.image(1080,520,'HexagonePerimetre').setScale(1);
 

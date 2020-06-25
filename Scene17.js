@@ -13,6 +13,8 @@ class Scene17 extends Phaser.Scene {
     
     create(){
 
+        localStorage.setItem('lastScene', 'Scene17');
+
         var soundConf = {
             mute: false,
             volume: 1,

@@ -7,15 +7,13 @@ class Scene6_10 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('Sphinx', 'assets/Sphinx.png');
-        this.load.image('homme', 'assets/homme.png');
-        this.load.image('abeille', 'assets/abeille.png');
-        this.load.image('oiseau', 'assets/oiseau.png');
-        this.load.image('chien', 'assets/chien.png');
+       
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_10');
 
         this.background = this.add.image(1080,520,'Sphinx').setScale(1);
 

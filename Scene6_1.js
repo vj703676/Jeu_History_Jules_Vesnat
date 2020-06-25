@@ -7,17 +7,12 @@ class Scene6_1 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('FormeCercle', 'assets/FormeCercle.png');
-       
-        this.load.image('Cercle', 'assets/Cercle.png');
-        this.load.image('Carre', 'assets/Carre.png');
-        this.load.image('Rectangle', 'assets/Rectangle.png');
-        this.load.image('Triangle', 'assets/Triangle.png');
-        this.load.image('parchemin2', 'assets/parchemin2.png');
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_1');
 
   
         this.background = this.add.image(1080,520,'FormeCercle').setScale(1);

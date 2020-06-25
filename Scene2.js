@@ -8,6 +8,8 @@ class Scene2 extends Phaser.Scene {
 
     create(){
 
+        localStorage.setItem('lastScene', 'playGame');
+
         var chevalier; 
         var garde;
         var cursors; 

@@ -9,23 +9,12 @@ class Scene3_1 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('tableau', 'assets/tableau1.png');
-        this.load.image('1cent', 'assets/1cent.png');
-        this.load.image('2cent', 'assets/2cent.png');
-        this.load.image('5cent', 'assets/5cent.png');
-        this.load.image('10cent', 'assets/10cent.png');
-        this.load.image('20cent', 'assets/20cent.png');
-        this.load.image('50cent', 'assets/50cent.png');
-        this.load.image('bulle', 'assets/bulle.png');
-        
-        this.load.image('valid', 'assets/valid.png');
-        this.load.image('refresh', 'assets/refresh.png');
-        this.load.audio('coin','assets/coin.mp3');
+  
     }
    
     create(){
        
-      
+      localStorage.setItem('lastScene', 'Scene3_1');
 
         var soundConf = {
             mute: false,

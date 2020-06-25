@@ -5,14 +5,13 @@ class Scene12_2 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('gif', 'assets/GIF.gif');
-   
-        this.load.image('up', 'assets/up.png');
-         this.load.audio('dark', 'assets/dark.mp3');
+     
     
     }
 
     create(){
+
+        localStorage.setItem('lastScene', 'Scene12_2');
 
 
         var musicConf2_13 = {

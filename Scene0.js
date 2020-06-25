@@ -23,7 +23,7 @@ class Scene0 extends Phaser.Scene {
         this.music0 = this.sound.add("preson");
         this.background = this.add.video(1100,500, 'chargement').setScale(2.8);  
         this.music0.play(musicConf0);
-        this.time.addEvent({ delay: 10000, callback: ()=>{ this.scene.start("bootGame")}, loop: false });
+        this.time.addEvent({ delay: 10000, callback: ()=>{ this.scene.start("loading")}, loop: false });
     }
 }
 

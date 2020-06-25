@@ -5,14 +5,11 @@ class Scene1_1 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('fleche', 'assets/arrow.png');
-        this.load.audio('timesound', 'assets/time_son.mp3');
-        this.load.image('machine', 'assets/time-machine.webp');
-        this.load.video('vortex1', 'assets/vortex.mp4', 'loadeddata', false, true);
+        
     }
 
     create(){
-
+        localStorage.setItem('lastScene', 'Time');
 
         var musicConf1_1 = {
             mute: false,

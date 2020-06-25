@@ -8,18 +8,12 @@ class Scene20 extends Phaser.Scene {
 
     preload(){
         
-        this.load.image('tresor2', 'assets/tresor2.png');
-        this.load.image('genie1', 'assets/genie1.png');
-        this.load.image('genie4', 'assets/genie4.png');
-        this.load.image('genie5', 'assets/genie5.png');
-        this.load.image('bulle2', 'assets/bulle2.png');
-        this.load.image('papyrus', 'assets/papyrus.png');
-        
-        this.load.audio('wrong','assets/wrong.mp3');
-        this.load.audio('good','assets/good.mp3');
+      
     }
     
     create(){
+
+        localStorage.setItem('lastScene', 'Scene20');
 
         var soundConf = {
             mute: false,

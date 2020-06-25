@@ -5,13 +5,12 @@ class Scene12_1 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('foret', 'assets/foret.jpg');
-   
-        this.load.image('up', 'assets/up.png');
-        this.load.audio('bird', 'assets/bird.mp3');
+     
     }
 
     create(){
+
+        localStorage.setItem('lastScene', 'Scene12_1');
 
         var musicConf2_13 = {
             mute: false,

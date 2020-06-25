@@ -5,14 +5,14 @@ class Scene29 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('cavedesert', 'assets/cavedesert.jpg');
-        this.load.audio('zelda', 'assets/zelda.mp3');
-        
-        this.load.image('ouvre1', 'assets/up.png');
+  
         
     }
 
     create(){
+
+        localStorage.setItem('lastScene', 'Scene29');
+
         var musicConf2_13 = {
             mute: false,
             volume: 0.5,

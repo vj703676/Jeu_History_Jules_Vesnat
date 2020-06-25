@@ -5,15 +5,12 @@ class Scene26 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('desert', 'assets/desert.jpg');
-        
-        
-        this.load.image('up1', 'assets/up.png');
-        this.load.audio('arabia', 'assets/arabia.mp3');
+       
     }
 
     create(){
 
+        localStorage.setItem('lastScene', 'Scene26');
 
         var musicConf1_1 = {
             mute: false,

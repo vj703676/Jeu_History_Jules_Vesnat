@@ -7,16 +7,13 @@ class Scene6_7 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('CarrePerimetre', 'assets/CarrePerimetre.png');
-        //this.load.audio('music3', 'assets/music.mp3');
-        this.load.image('12cm', 'assets/12cm.png');
-        this.load.image('18cm', 'assets/18cm.png');
-        this.load.image('24cm', 'assets/24cm.png');
-        this.load.image('26cm', 'assets/26cm.png');
+    
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_7');
 
         this.background = this.add.image(1080,520,'CarrePerimetre').setScale(1);
 

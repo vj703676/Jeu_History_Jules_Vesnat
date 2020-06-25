@@ -5,16 +5,14 @@ class Scene12 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('grece', 'assets/grece.png');
-        this.load.image('panneau', 'assets/panneau.png');
-        this.load.image('statue', 'assets/statue.png');
-        this.load.image('pythagore', 'assets/Pythagore.png');
-        this.load.audio('savazios', 'assets/savazios.mp3');
+       
        
     }
 
 
     create(){
+
+        localStorage.setItem('lastScene', 'Scene12');
 
         var chevalier; 
         var garde;

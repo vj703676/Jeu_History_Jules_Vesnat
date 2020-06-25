@@ -7,16 +7,13 @@ class Scene6_4 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('FormePentagone', 'assets/FormePentagone.png');
-        //this.load.audio('music3', 'assets/music.mp3');
-        this.load.image('Pentagone', 'assets/Pentagone.png');
-        this.load.image('Octogone', 'assets/Octogone.png');
-        this.load.image('Losange', 'assets/Losange.png');
-        this.load.image('Hexagone', 'assets/Hexagone.png');
+ 
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_4');
 
         this.background = this.add.image(1080,520,'FormePentagone').setScale(1);
 

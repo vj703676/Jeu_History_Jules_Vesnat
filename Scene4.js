@@ -5,14 +5,13 @@ class Scene4 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('interieur', 'assets/interieur.jpg');
-        
-        this.load.audio('inf', 'assets/infiltration.mp3');
-        this.load.image('fleche1', 'assets/fleche.png');
+   
         
     }
 
     create(){
+
+        localStorage.setItem('lastScene', 'Scene4');
 
         var musicConf = {
             mute: false,

@@ -5,14 +5,14 @@ class Scene12_3 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('entrecave', 'assets/entrecave.jpg');
+        
    
     }
 
     create(){
 
        
-
+        localStorage.setItem('lastScene', 'Scene12_3');
         
         this.background = this.add.image(1080,500,'entrecave').setScale(1.5);
 

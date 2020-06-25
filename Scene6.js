@@ -8,13 +8,12 @@ class Scene6 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('Sphinx', 'assets/Sphinx.png');
-        //this.load.audio('music3', 'assets/music.mp3');
-        this.load.image('ok', 'assets/flecheb.png');
-        this.load.audio('sava', 'assets/riddle.mp3');
     }
     
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6');
+
        var musicConf = {
             mute: false,
             volume: 1,

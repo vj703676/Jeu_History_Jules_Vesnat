@@ -5,15 +5,13 @@ class Scene25 extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image('market', 'assets/market.jpg');
-        this.load.image('chameau', 'assets/chameau.png');
        
-        this.load.image('al', 'assets/al.png');
-        this.load.audio('banner', 'assets/banner.mp3');
     }
 
 
     create(){
+
+        localStorage.setItem('lastScene', 'Scene25');
 
         var chevalier; 
         var garde;

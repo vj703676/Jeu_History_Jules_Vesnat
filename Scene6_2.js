@@ -7,16 +7,13 @@ class Scene6_2 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('FormeTriangle', 'assets/FormeTriangle.png');
-        //this.load.audio('music3', 'assets/music.mp3');
-        this.load.image('Cercle', 'assets/Cercle.png');
-        this.load.image('Carre', 'assets/Carre.png');
-        this.load.image('Rectangle', 'assets/Rectangle.png');
-        this.load.image('Triangle', 'assets/Triangle.png');
+   
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_2');
 
         this.background = this.add.image(1080,520,'FormeTriangle').setScale(1);
 

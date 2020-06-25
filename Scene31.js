@@ -6,10 +6,11 @@ class Scene31 extends Phaser.Scene {
 
       
     preload(){
-        this.load.video('vortex6', 'assets/vortex.mp4', 'loadeddata', false, true);
-        this.load.audio('vortex1', 'assets/1.mp3');
+        
      }
      create(){
+
+        localStorage.setItem('lastScene', 'Scene31');
 
         var musicConf2_11 = {
             mute: false,

@@ -7,16 +7,13 @@ class Scene6_8 extends Phaser.Scene {
 
     preload(){
 
-        this.load.image('RectanglePerimetre', 'assets/RectanglePerimetre.png');
-        //this.load.audio('music3', 'assets/music.mp3');
-        this.load.image('34cm', 'assets/34cm.png');
-        this.load.image('36cm', 'assets/36cm.png');
-        this.load.image('38cm', 'assets/38cm.png');
-        this.load.image('26cm', 'assets/26cm.png');
+    
     }
 
      
     create(){
+
+        localStorage.setItem('lastScene', 'Scene6_8');
 
         this.background = this.add.image(1080,520,'RectanglePerimetre').setScale(1);
 
